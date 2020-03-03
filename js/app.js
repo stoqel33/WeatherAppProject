@@ -6,10 +6,9 @@ const api = {
 const search = document.querySelector('#search');
 
 function set(e) {
-  if (e.keyCode === 13) {
-    getResult(search.value);
-    search.value = '';
-  }
+  e.preventDefault();
+  getResult(search.value);
+  search.value = '';
 }
 
 
@@ -50,5 +49,4 @@ function displayResult(weather) {
   date.innerHTML = dateBuilder(now);
 }
 
-search.addEventListener('keypress', set);
-search.addEventListener('submit', set);
+document.querySelector('.header').addEventListener('submit', set);
