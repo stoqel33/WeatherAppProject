@@ -51,3 +51,4 @@ function displayResult(weather) {
 }
 
 search.addEventListener('keypress', set);
+search.addEventListener('submit', set);
