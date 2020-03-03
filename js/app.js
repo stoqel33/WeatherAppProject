@@ -1,6 +1,6 @@
 const api = {
-  key: '85ee8e7f5ac47dd30958b9c762941400',
-  baseUrl: 'http://api.openweathermap.org/data/2.5/'
+  key: 'caa1ef6403f7ae0da57ee5d219c7a2ac',
+  baseUrl: 'http://api.weatherstack.com/current?access_key='
 };
 
 const search = document.querySelector('#search');
@@ -13,7 +13,7 @@ function set(e) {
 
 
 function getResult(input) {
-  fetch(`${api.baseUrl}weather?q=${input}&units=metric&APPID=${api.key}`)
+  fetch(`${api.baseUrl}${api.key}&query=${input}`)
     .then(weather => {
       return weather.json();
     })
@@ -36,13 +36,13 @@ function displayResult(weather) {
   console.log(weather);
 
   let city = document.querySelector('#city');
-  city.textContent = weather.name;
+  city.textContent = weather.location.name;
 
   let temp = document.querySelector('#temp');
-  temp.innerHTML = `${Math.round(weather.main.temp)}<span>&#8451;</span>`;
+  temp.innerHTML = `${Math.round(weather.current.temperature)}<span>&#8451;</span>`;
 
   let status = document.querySelector('#status');
-  status.textContent = weather.weather[0].main;
+  status.textContent = weather.current.weather_descriptions;
 
   let now = new Date();
   let date = document.querySelector('#date');
