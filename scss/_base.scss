@@ -1,0 +1,14 @@
+body{
+  min-height: 100vh;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-image: url('../image/bg-imageSmall.png');
+  background-size: cover;
+  background-position: center;
+}

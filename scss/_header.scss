@@ -1,0 +1,22 @@
+.header{
+  display: flex;
+  justify-content: center;
+  margin: $main-spacing*3;
+
+  &--search{
+    width: 100%;
+    padding: $main-spacing/2 $main-spacing;
+    border: none;
+    background-color: rgba(8, 93, 168,0.1);
+    border-radius: 0 16px 0 16px;
+    border-bottom: 3px solid #5c5cb1;
+    color: darkslategrey;
+    font-size: 1.1rem;
+    font-weight: 300;
+    transition: .3s;
+
+    &:focus{
+      border-bottom: 3px solid yellow;
+    }
+  }
+}

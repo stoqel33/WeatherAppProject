@@ -1,0 +1,29 @@
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: $main-spacing*6;
+  color: $font-color;
+  
+  &--city{
+    margin-bottom: $main-spacing/2;
+    font-size: 3rem;
+    font-weight: 800;
+  }
+
+  &--date{
+    margin-bottom: $main-spacing;
+    font-weight: 300;
+    font-size: 1.2rem;
+  }
+
+  &--temperature{
+    font-weight: 800;
+    font-size: 6rem;
+  }
+
+  &--weather{
+    font-size: 1.5rem;
+  }
+}

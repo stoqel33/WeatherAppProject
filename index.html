@@ -4,13 +4,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap&subset=latin-ext"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <title>WeatherApp</title>
 </head>
 
 <body>
-  hello
+  <div class="container">
 
+    <header class="header">
+      <input type="text" class="header--search" placeholder="Search city">
+    </header>
+
+    <main class="main">
+      <section class="main--location">
+        <div class="main--city">Krakow</div>
+        <div class="main--date">Thusday 03 March 2020</div>
+      </section>
+
+      <div class="main--current">
+        <div class="main--temperature">8<span>&#8451;</span></div>
+        <div class="main--weather">Sunny</div>
+      </div>
+    </main>
+
+  </div>
   <script src="js/app.js"></script>
 </body>
 
